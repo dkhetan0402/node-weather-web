@@ -11,7 +11,7 @@ const weather = (latitude, longitude, callback) => {
         }else if(bodyError){
             callback('Unable to find weather for specified location. Try another search');
         }else{
-            callback(undefined, current.weather_descriptions[0] + ' with a temperature of '+current.temperature+' degrees. It feels like '+current.feelslike+' degrees. Chance of rain is '+current.precip+'%');
+            callback(undefined, current.weather_descriptions[0] + ' with a temperature of '+current.temperature+' degrees. It feels like '+current.feelslike+' degrees. Humidity is '+ current.humidity+'%. Chance of rain is '+current.precip+'%');
         }
     });
 };
